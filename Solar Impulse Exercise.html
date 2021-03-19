@@ -14590,7 +14590,7 @@ Driving power for Sky Sailor : 6.998345103673023 W
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Let's consider that the power flux density is a sinus between 6 and 21.</p>
 <p>We need to determine $\omega$ and $\phi$ in $sin(\omega t + \phi)$</p>
-<p>$\omega = \frac{2 \pi}{T}$, and $T = 2*(20.75-6.25 = 2*14.5$ so :</p>
+<p>$\omega = \frac{2 \pi}{T}$, and $T = 2*(20.75-6.25) = 2*14.5$ so :</p>
 <p>$\omega = \frac{\pi}{14.5}$</p>
 
 </div>
@@ -14783,18 +14783,56 @@ $$\Large P_m = a * size^\frac{7}{2}      ;      I = b * size^2$$<p>We need to pl
 </blockquote>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We know that Solar Impulse is using solar cells with the following characteristics: <br/>
+Surface = $2.4 \cdot 10^{-2} m^2$  ;
+Nominal operating voltage = $0.5 V$  ;
+Produced Current = $7.64 A $</p>
+<p>$c = 3.108 m/s$  ;
+$h = 6.6 \cdot 10^{-34} J.s$  ;
+$1 eV = 1.6 \cdot 10^{-19} J$</p>
+<p>For the silicon cells equipping the Solar Impulse, the limit energy is: $EG = 1,1eV$. What is the corresponding wavelength does it fit?</p>
+<p>First, we know $E=h \nu$ and $\nu=\frac{c} {\lambda}$, so $E=\frac{h c}{\lambda}$.</p>
+<p>Then, we have the final formula : $\Large \lambda=\frac{h c}{E}$.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span> <span class="p">,</span> <span class="n">h</span> <span class="p">,</span> <span class="n">eV</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">8</span> <span class="p">,</span> <span class="mf">6.6</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">34</span><span class="p">)</span> <span class="p">,</span> <span class="mf">1.6</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">19</span><span class="p">)</span>
+<span class="n">lamb</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="mf">1.1</span><span class="o">*</span><span class="n">eV</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lamb</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;nm&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1124.9999999999995 nm
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14844,7 +14882,54 @@ $$\Large P_m = a * size^\frac{7}{2}      ;      I = b * size^2$$<p>We need to pl
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="2.-Solar-Impulse,-day-or-night-flight-">2. Solar Impulse, day or night flight <a class="anchor" id="2" /><a class="anchor-link" href="#2.-Solar-Impulse,-day-or-night-flight-">&#182;</a></h1>
+<blockquote><h2 id="2.4.-Engines-and-propellers-">2.4. Engines and propellers <a class="anchor" id="2.4" /><a class="anchor-link" href="#2.4.-Engines-and-propellers-">&#182;</a></h2><blockquote><h3 id="2.4.1.-Question-1-">2.4.1. Question 1 <a class="anchor" id="2.4.1" /><a class="anchor-link" href="#2.4.1.-Question-1-">&#182;</a></h3>
+</blockquote>
+</blockquote>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><blockquote><h3 id="2.4.2.-Question-2-">2.4.2. Question 2 <a class="anchor" id="2.4.2" /><a class="anchor-link" href="#2.4.2.-Question-2-">&#182;</a></h3>
+</blockquote>
+</blockquote>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><blockquote><h3 id="2.4.3.-Question-3-">2.4.3. Question 3 <a class="anchor" id="2.4.3" /><a class="anchor-link" href="#2.4.3.-Question-3-">&#182;</a></h3>
+</blockquote>
+</blockquote>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
